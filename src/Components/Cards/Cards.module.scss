@@ -1,0 +1,188 @@
+$white: #ffffff;
+$black: #000000;
+$transparent-black: rgba(0, 0, 0, 0.6);
+$shadow-black: rgba(2,0,36,.6);
+$shadow-white: rgba(255,255,255,0);
+$white-smoke: #f4f4f4;
+$grey: #cccccc;
+$dark-grey: #999999;
+$lilac: #5521cd;
+
+.cards {
+  position: relative;
+  margin: 10px 9px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $lilac;
+  }
+
+  position: relative;
+  height: auto;
+  max-width: 250px;
+  padding: 15px;
+  background-color: $white;
+  border: solid thin $grey;
+  border-radius: 5px;
+  overflow: hidden;
+
+  > p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $dark-grey;
+  }
+
+  > p.overflow {
+    height: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .specialText {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $lilac;
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+  }
+
+  > figure {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    > img {
+      display: block;
+      position: relative;
+      z-index: 0;
+    }
+
+    figcaption {
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, $shadow-black 0%, $shadow-white 100%);
+      padding: 20px;
+
+      h4, div {
+        margin: 0;
+        color: $white;
+      }
+
+      h4 {
+        margin-top: 60px
+      }
+    }
+  } 
+}
+
+.header {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  h3 {
+    margin-top: 0;
+    max-width: 170px;
+    overflow: hidden;
+  }
+}
+
+.summary {
+  display: inline-flex;
+  flex-direction: column;
+  padding-left: 20px;
+
+  h3 {
+    margin-top: 0;
+    max-width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .miniSummary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding-right: 10px;
+
+      span {
+        display: block;
+        font-weight: 500;
+      }
+
+      span:last-child {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.cards {
+  > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    background-color: transparent;
+    transition: background-color 300ms;
+    z-index: 2;
+  }
+
+  &:hover > .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background-color: $transparent-black;
+    visibility: visible;
+    transition: background-color 300ms;
+
+    button {
+      display: block;
+      padding: 5px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 100px;
+      margin: 10px 0;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    button:hover {
+     background-color: $grey;
+    }
+  }
+}

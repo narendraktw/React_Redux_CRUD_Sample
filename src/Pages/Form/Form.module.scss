@@ -1,0 +1,48 @@
+.formContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-width: 650px; 
+    margin: 0 auto;
+    padding-top: 20px;
+    
+    form{
+      display: flex;
+      flex-direction: column;
+      p{
+        color:red;
+      }
+      label{
+        margin-bottom:10px;
+        margin-top:10px;
+      }
+      input, textarea{
+        padding:10px;
+        
+        border-radius: 20px;
+      }
+      
+      input, textarea:focus{
+        outline:none;
+      }
+
+      button{
+        background: linear-gradient(
+          to right,
+          #7474bf 0%,
+          #348ac7 51%,
+          #7474bf 100%
+        );
+        border-radius: 12px !important;
+        padding: 5px;
+        border:none;
+        cursor: pointer;
+        height: 35px;
+        color: #fff;
+        outline:none;
+        margin-top:10px;
+      }
+  
+    }
+
+}
