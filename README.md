@@ -13,6 +13,9 @@ json-server --watch ./public/assets/developers.json
 ## Available Scripts
 
 In the project directory, you can run:
+## Install Dependencies
+
+Run npm install
 
 ### `npm start`
 
