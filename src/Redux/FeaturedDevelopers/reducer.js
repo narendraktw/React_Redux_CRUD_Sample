@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
     case DELETE_DEVELOPER:
       return {
         ...state,
-        items: state.filter(item => item.id !== action.id),
+        items: state.filter((item) => item.id !== action.id),
         error: "",
       };
     case GET_DEVELOPER:

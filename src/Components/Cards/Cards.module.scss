@@ -1,8 +1,8 @@
 $white: #ffffff;
 $black: #000000;
 $transparent-black: rgba(0, 0, 0, 0.6);
-$shadow-black: rgba(2,0,36,.6);
-$shadow-white: rgba(255,255,255,0);
+$shadow-black: rgba(2, 0, 36, 0.6);
+$shadow-white: rgba(255, 255, 255, 0);
 $white-smoke: #f4f4f4;
 $grey: #cccccc;
 $dark-grey: #999999;
@@ -82,16 +82,17 @@ $lilac: #5521cd;
       background: linear-gradient(0deg, $shadow-black 0%, $shadow-white 100%);
       padding: 20px;
 
-      h4, div {
+      h4,
+      div {
         margin: 0;
         color: $white;
       }
 
       h4 {
-        margin-top: 60px
+        margin-top: 60px;
       }
     }
-  } 
+  }
 }
 
 .header {
@@ -182,7 +183,7 @@ $lilac: #5521cd;
     }
 
     button:hover {
-     background-color: $grey;
+      background-color: $grey;
     }
   }
 }

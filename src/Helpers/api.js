@@ -25,8 +25,8 @@ class Api {
         method: method,
         headers: new Headers({
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin" : "*",
-          "Access-Control-Allow-Methods": "GET,HEAD,POST,PUT,PATCH"
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,HEAD,POST,PUT,PATCH",
         }),
         ...options,
       });

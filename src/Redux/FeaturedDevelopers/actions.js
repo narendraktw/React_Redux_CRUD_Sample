@@ -14,7 +14,7 @@ const addDevelopers = (data, id) => async (dispatch) => {
       response = await Api.post(`${API_LINK}`, { body: JSON.stringify(data) });
     }
 
-    console.log('response is', response);
+    console.log("response is", response);
 
     if (response?.id) {
       return true;
@@ -61,7 +61,6 @@ const deleteDeveloper = (id) => async (dispatch) => {
   try {
     await Api.delete(`${API_LINK}/${id}`);
   } catch (e) {
-
     console.log(e);
     dispatch({
       type: actions.DELETE_DEVELOPER,
