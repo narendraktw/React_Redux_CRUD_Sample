@@ -67,12 +67,12 @@ function Form({ match }) {
         <label>Delveloper Logo Image URL</label>
         <input
           name="logo"
-          ref={register({ required: true })}
+          ref={register({ required: true, pattern: /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g })}
           onChange={handleOnChange}
           value={inputs.logo}
         />
-        {errors.logo && <p>Logo image url is required</p>}
-
+        {errors.logo && <p>Logo image url is required or url passed it not in valid format.</p>}
+        
         <label>Delveloper Name</label>
         <input
           name="title"
@@ -132,11 +132,11 @@ function Form({ match }) {
         <label>Project Image URL</label>
         <input
           name="imgURL"
-          ref={register({ required: true })}
+          ref={register({ required: true, pattern: /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g })}
           onChange={handleOnChange}
           value={inputs.imgURL}
         />
-        {errors.imgURL && <p>Project image url is required</p>}
+        {errors.imgURL && <p>Project image url is required or image url is not in valid format</p>}
         <button type="submit" className="btnSubmit">
           {id ? "Update" : "Submit"}
         </button>
