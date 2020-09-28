@@ -44,7 +44,7 @@ const Home = () => {
           ))
         ) : (
           <div>
-            <mark>No featured developer available</mark>
+            {/* No featured developer available */}
           </div>
         )}
       </div>
