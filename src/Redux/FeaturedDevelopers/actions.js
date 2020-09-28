@@ -28,20 +28,11 @@ const addDevelopers = (data, id) => async (dispatch) => {
 };
 
 const editDevelopers = (id) => async (dispatch) => {
-  //const data = await Api.get(`${API_LINK}/${id}`);
-
-  return {
-    type: actions.EDIT_DEVELOPERS,
-  };
-};
-
-const getDeveloper = (id) => async (dispatch) => {
   try {
     const current = await Api.get(`${API_LINK}/${id}`);
-
     if (current) {
       dispatch({
-        type: actions.GET_DEVELOPER,
+        type: actions.EDIT_DEVELOPERS,
         payload: {
           current,
         },
@@ -51,7 +42,7 @@ const getDeveloper = (id) => async (dispatch) => {
     }
   } catch (e) {
     dispatch({
-      type: actions.GET_DEVELOPER,
+      type: actions.EDIT_DEVELOPERS,
       error: e?.message || "An error occurred!",
     });
   }
@@ -61,7 +52,6 @@ const deleteDeveloper = (id) => async (dispatch) => {
   try {
     await Api.delete(`${API_LINK}/${id}`);
   } catch (e) {
-    console.log(e);
     dispatch({
       type: actions.DELETE_DEVELOPER,
       error: e?.message || "An error occurred!",
@@ -70,7 +60,7 @@ const deleteDeveloper = (id) => async (dispatch) => {
     return;
   }
 
-  dispatch(listDevelopers());
+  // dispatch(listDevelopers());
 };
 
 const listDevelopers = () => async (dispatch) => {
@@ -99,6 +89,5 @@ export {
   addDevelopers,
   editDevelopers,
   deleteDeveloper,
-  listDevelopers,
-  getDeveloper,
+  listDevelopers
 };

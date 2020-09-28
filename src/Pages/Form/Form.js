@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 import {
-  getDeveloper,
+  editDevelopers,
   addDevelopers,
 } from "../../Redux/FeaturedDevelopers/actions";
 import styles from "./Form.module.scss";
@@ -49,7 +49,7 @@ function Form({ match }) {
 
   useEffect(() => {
     if (!Object.keys(data || {}).length && !!id) {
-      dispatch(getDeveloper(id));
+      dispatch(editDevelopers(id));
     } else if (Object.keys(data || {}).length && !apiData.title) {
       setApiData({
         ...data,

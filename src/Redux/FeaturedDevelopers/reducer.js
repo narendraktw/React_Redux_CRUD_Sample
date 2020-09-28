@@ -2,7 +2,6 @@ import {
   ADD_DEVELOPERS,
   EDIT_DEVELOPERS,
   DELETE_DEVELOPER,
-  GET_DEVELOPER,
   LIST_DEVELOPERS,
 } from "./actionTypes";
 
@@ -23,8 +22,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        users: action.payload,
-        error: "",
+        users: {
+          ...state.users,
+          ...action.payload,
+        },
+        error: action.error,
       };
     case DELETE_DEVELOPER:
       return {
@@ -32,16 +34,16 @@ const reducer = (state = initialState, action) => {
         items: state.filter((item) => item.id !== action.id),
         error: "",
       };
-    case GET_DEVELOPER:
-      return {
-        ...state,
-        loading: false,
-        users: {
-          ...state.users,
-          ...action.payload,
-        },
-        error: action.error,
-      };
+    // case GET_DEVELOPER:
+    //   return {
+    //     ...state,
+    //     loading: false,
+    //     users: {
+    //       ...state.users,
+    //       ...action.payload,
+    //     },
+    //     error: action.error,
+    //   };
     case LIST_DEVELOPERS:
       return {
         ...state,
