@@ -26,10 +26,11 @@ const Home = () => {
           <h1>Featured Developers</h1>
           <h2>Prominent developers in Banglore</h2>
         </div>
+
         <div className={styles.addButton}>
-          <button type="button">
-            <Link to={`/Form`}>+ Add New Developers</Link>
-          </button>
+          <Link to={`/Form`}>
+            <button type="button">+ Add New Developers</button>
+          </Link>
         </div>
       </div>
 
@@ -43,9 +44,7 @@ const Home = () => {
             />
           ))
         ) : (
-          <div>
-            {/* No featured developer available */}
-          </div>
+          <div>{/* No featured developer available */}</div>
         )}
       </div>
     </section>

@@ -23,6 +23,7 @@
       flex: 0.2;
       font-size: 15px;
       text-align: right;
+      
       button {
         background: linear-gradient(
           to right,
@@ -34,11 +35,8 @@
         padding: 8px;
         border:none;
         cursor: pointer;
-        a{
-          color: #fff !important;
-          text-decoration: none !important;
-      
-        }
+        outline: none;
+        color: #fff;        
       }
     }
   }
