@@ -1,0 +1,206 @@
+.cards {
+  position: relative;
+  margin: 10px 9px;
+  position: relative;
+  height: auto;
+  max-width: 250px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: solid thin #cccccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cards:last-child {
+  margin-right: 0;
+}
+
+.cards:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: "absolute";
+  top: 0;
+  left: 0;
+  background-color: #5521cd;
+}
+
+.cards > p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999999;
+}
+
+.cards > p.overflow {
+  height: 50px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cards .specialText {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5521cd;
+  margin: 20px 0 10px 0;
+  text-decoration: underline;
+}
+
+.cards > figure {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.cards > figure > img {
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.cards > figure figcaption {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(2, 0, 36, 0.6)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, rgba(2, 0, 36, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 20px;
+}
+
+.cards > figure figcaption h4,
+.cards > figure figcaption div {
+  margin: 0;
+  color: #ffffff;
+}
+
+.cards > figure figcaption h4 {
+  margin-top: 60px;
+}
+
+.header {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header h3 {
+  margin-top: 0;
+  max-width: 170px;
+  overflow: hidden;
+}
+
+.summary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+}
+
+.summary h3 {
+  margin-top: 0;
+  max-width: 170px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.summary .miniSummary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.summary .miniSummary p {
+  margin: 0;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.summary .miniSummary p span {
+  display: block;
+  font-weight: 500;
+}
+
+.summary .miniSummary p span:last-child {
+  color: #999999;
+}
+
+.cards > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  background-color: transparent;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  z-index: 2;
+}
+
+.cards:hover > .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: visible;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.cards:hover > .overlay button {
+  display: block;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 100px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.cards:hover > .overlay button a {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 35px 5px 35px;
+}
+
+.cards:hover > .overlay button:hover {
+  background-color: #cccccc;
+}
+/*# sourceMappingURL=Cards.module.css.map */

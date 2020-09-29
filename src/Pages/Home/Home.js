@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
 import {
   listDevelopers,
   deleteDeveloper,
@@ -11,10 +10,12 @@ import styles from "./Home.module.scss";
 import Card from "../../Components/Cards/Card";
 
 const Home = () => {
+  
   const dispatch = useDispatch();
   const data = useSelector(
     (state) => state.featureDevelopers.users?.developers
   );
+  
   useEffect(() => {
     dispatch(listDevelopers());
   }, [dispatch]);

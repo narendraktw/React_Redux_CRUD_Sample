@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 import {
-  editDevelopers,
-  addDevelopers,
+  editDeveloper,
+  addDeveloper,
 } from "../../Redux/FeaturedDevelopers/actions";
 import styles from "./Form.module.scss";
 
@@ -40,7 +40,8 @@ function Form({ match }) {
   };
 
   const onSubmit = (data) => {
-    dispatch(addDevelopers(data, id)).then((res) => {
+    // returns a promise
+    dispatch(addDeveloper(data, id)).then((res) => {
       if (res) {
         history.push("/");
       }
@@ -49,8 +50,9 @@ function Form({ match }) {
 
   useEffect(() => {
     if (!Object.keys(data || {}).length && !!id) {
-      dispatch(editDevelopers(id));
+      dispatch(editDeveloper(id));
     } else if (Object.keys(data || {}).length && !apiData.title) {
+      //populate data local state
       setApiData({
         ...data,
       });

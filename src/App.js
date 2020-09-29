@@ -9,8 +9,7 @@ import NavBar from './Components/Navbar/Navbar';
 import './App.css';
 
 function App() {
-  return (
-    
+  return (    
     <Router>
       <Provider store={store}>
       <div className="App">

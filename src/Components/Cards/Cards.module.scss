@@ -1,29 +1,19 @@
-$white: #ffffff;
-$black: #000000;
-$transparent-black: rgba(0, 0, 0, 0.6);
-$shadow-black: rgba(2, 0, 36, 0.6);
-$shadow-white: rgba(255, 255, 255, 0);
-$white-smoke: #f4f4f4;
-$grey: #cccccc;
-$dark-grey: #999999;
-$lilac: #5521cd;
+@import "../../Styles/variables";
+@import "../../Styles/mixin";
 
 .cards {
   position: relative;
   margin: 10px 9px;
-
   &:last-child {
     margin-right: 0;
   }
-
+  
   &:before {
     content: "";
     display: block;
     height: 5px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;  
+    @include setPosition('absolute');  
     background-color: $lilac;
   }
 
@@ -73,15 +63,13 @@ $lilac: #5521cd;
 
     figcaption {
       box-sizing: border-box;
-      position: absolute;
+      @include setPosition(absolute);
       z-index: 1;
-      top: 0;
-      left: 0;
       height: 100%;
       width: 100%;
       background: linear-gradient(0deg, $shadow-black 0%, $shadow-white 100%);
-      padding: 20px;
-
+      padding: 20px;     
+      
       h4,
       div {
         margin: 0;
@@ -144,10 +132,8 @@ $lilac: #5521cd;
 }
 
 .cards {
-  > .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+  > .overlay {   
+    @include setPosition(absolute);  
     height: 100%;
     width: 100%;
     visibility: hidden;

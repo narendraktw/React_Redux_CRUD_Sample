@@ -3,7 +3,7 @@ import Api from "../../Helpers/api.js";
 
 const API_LINK = `http://localhost:3000/items`;
 
-const addDevelopers = (data, id) => async (dispatch) => {
+const addDeveloper = (data, id) => async (dispatch) => {
   let response;
   try {
     if (id || id === 0) {
@@ -13,26 +13,24 @@ const addDevelopers = (data, id) => async (dispatch) => {
     } else {
       response = await Api.post(`${API_LINK}`, { body: JSON.stringify(data) });
     }
-
-    console.log("response is", response);
-
+    
     if (response?.id) {
       return true;
     }
   } catch (e) {
     dispatch({
-      type: actions.ADD_DEVELOPERS,
+      type: actions.ADD_DEVELOPER,
       error: e?.message || "An error occurred!",
     });
   }
 };
 
-const editDevelopers = (id) => async (dispatch) => {
+const editDeveloper = (id) => async (dispatch) => {
   try {
     const current = await Api.get(`${API_LINK}/${id}`);
     if (current) {
       dispatch({
-        type: actions.EDIT_DEVELOPERS,
+        type: actions.EDIT_DEVELOPER,
         payload: {
           current,
         },
@@ -42,7 +40,7 @@ const editDevelopers = (id) => async (dispatch) => {
     }
   } catch (e) {
     dispatch({
-      type: actions.EDIT_DEVELOPERS,
+      type: actions.EDIT_DEVELOPER,
       error: e?.message || "An error occurred!",
     });
   }
@@ -56,10 +54,8 @@ const deleteDeveloper = (id) => async (dispatch) => {
       type: actions.DELETE_DEVELOPER,
       error: e?.message || "An error occurred!",
     });
-
     return;
   }
-
   // dispatch(listDevelopers());
 };
 
@@ -86,8 +82,8 @@ const listDevelopers = () => async (dispatch) => {
 };
 
 export {
-  addDevelopers,
-  editDevelopers,
+  addDeveloper,
+  editDeveloper,
   deleteDeveloper,
   listDevelopers
 };

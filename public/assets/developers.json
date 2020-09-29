@@ -2,13 +2,13 @@
   "items": [
     {
       "logo": "https://www.prestigeconstructions.com/wp-content/uploads/2017/08/prestige-group-logo.png",
-      "imgURL": "https://www.prestigeconstructions.com/wp-content/uploads/prestige-misty-waters-vista-towers-exterior-view-1170x600.jpg",
-      "imgTitle": "Prestige Misty Waters",
       "title": "Prestige Estates Projects",
       "totalExp": "32",
       "totalProjects": "241",
       "desc": "Prestige Group is a prominent real-estate developer in india with 32 years of rich experience .It established itself as one of the leading and most successful developers of real estate in India by imprinting its indelible mark across all asset classes.",
+      "imgTitle": "Prestige Misty Waters",
       "location": "Bangalore,Nagavara",
+      "imgURL": "https://www.prestigeconstructions.com/wp-content/uploads/prestige-misty-waters-vista-towers-exterior-view-1170x600.jpg",
       "id": 1
     },
     {
@@ -24,13 +24,13 @@
     },
     {
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk3N5Wn9mHlv4F8TYhU89YkFONTQgXSSPnmScH2Nx2_qWMD1T7zw",
+      "imgURL": "https://is1-2.housingcdn.com/4f2250e8/5dd8ed6c0ce7cc009f60645d5e215574/v5/fs/concorde_tech_turf-electronics_city_phase_1-bengaluru-concorde_housing_corporation_pvt._ltd..jpg",
+      "imgTitle": "Jain Rain Forests",
       "title": "Jain Heights",
       "totalExp": "9",
       "totalProjects": "5",
       "desc": "Jain Heights have pioneered in nurturing the concept of Style and Stature in living standards and adding immense value to our business credibility. Our vision and endeavour has always been to create world-class spaces and provide a high quality of life for people who personify themselves with a sense of luxury, convenience and an enduring relationship.",
-      "imgTitle": "Jain Rain Forests",
       "location": "Devanahalli,Bangalore",
-      "imgURL": "https://is1-2.housingcdn.com/4f2250e8/5dd8ed6c0ce7cc009f60645d5e215574/v5/fs/concorde_tech_turf-electronics_city_phase_1-bengaluru-concorde_housing_corporation_pvt._ltd..jpg",
       "id": 3
     }
   ]

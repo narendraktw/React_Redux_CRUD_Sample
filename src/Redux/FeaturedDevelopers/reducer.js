@@ -1,6 +1,6 @@
 import {
-  ADD_DEVELOPERS,
-  EDIT_DEVELOPERS,
+  ADD_DEVELOPER,
+  EDIT_DEVELOPER,
   DELETE_DEVELOPER,
   LIST_DEVELOPERS,
 } from "./actionTypes";
@@ -13,12 +13,12 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_DEVELOPERS:
+    case ADD_DEVELOPER:
       return {
         ...state,
         loading: true,
       };
-    case EDIT_DEVELOPERS:
+    case EDIT_DEVELOPER:
       return {
         ...state,
         loading: false,
@@ -34,16 +34,6 @@ const reducer = (state = initialState, action) => {
         items: state.filter((item) => item.id !== action.id),
         error: "",
       };
-    // case GET_DEVELOPER:
-    //   return {
-    //     ...state,
-    //     loading: false,
-    //     users: {
-    //       ...state.users,
-    //       ...action.payload,
-    //     },
-    //     error: action.error,
-    //   };
     case LIST_DEVELOPERS:
       return {
         ...state,
