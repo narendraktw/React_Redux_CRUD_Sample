@@ -1,13 +1,15 @@
-var str = "Hello Narendra how are you";
 
-function reverseStr(str) {
-  (str1 = ""), (newArr = []);
-  var newStr = str.split(" ");
-  for (var j = 0; j < newStr.length; j++) {
-    str1 = newStr[j].split("").reverse().join("");
-    newArr.push(str1);
+function counter() {
+    // code here
+    var next1=0;
+       return function(){
+        next1 = next1+1;
+        console.log(next1);
+    }     
   }
-  return newArr;
-}
-
-console.log(reverseStr(str));
+  
+  const next = counter();
+   
+  next(); // 1
+  next(); // 2
+  next(); // 3

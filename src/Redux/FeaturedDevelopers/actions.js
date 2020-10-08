@@ -62,7 +62,6 @@ const deleteDeveloper = (id) => async (dispatch) => {
 const listDevelopers = () => async (dispatch) => {
   try {
     const developers = await Api.get(API_LINK);
-
     if (developers.length || developers.length === 0) {
       dispatch({
         type: actions.LIST_DEVELOPERS,

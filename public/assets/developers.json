@@ -24,14 +24,25 @@
     },
     {
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk3N5Wn9mHlv4F8TYhU89YkFONTQgXSSPnmScH2Nx2_qWMD1T7zw",
-      "imgURL": "https://is1-2.housingcdn.com/4f2250e8/5dd8ed6c0ce7cc009f60645d5e215574/v5/fs/concorde_tech_turf-electronics_city_phase_1-bengaluru-concorde_housing_corporation_pvt._ltd..jpg",
-      "imgTitle": "Jain Rain Forests",
       "title": "Jain Heights",
       "totalExp": "9",
       "totalProjects": "5",
       "desc": "Jain Heights have pioneered in nurturing the concept of Style and Stature in living standards and adding immense value to our business credibility. Our vision and endeavour has always been to create world-class spaces and provide a high quality of life for people who personify themselves with a sense of luxury, convenience and an enduring relationship.",
+      "imgTitle": "Jain Rain Forests",
       "location": "Devanahalli,Bangalore",
+      "imgURL": "https://is1-2.housingcdn.com/4f2250e8/5dd8ed6c0ce7cc009f60645d5e215574/v5/fs/concorde_tech_turf-electronics_city_phase_1-bengaluru-concorde_housing_corporation_pvt._ltd..jpg",
       "id": 3
+    },
+    {
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk3N5Wn9mHlv4F8TYhU89YkFONTQgXSSPnmScH2Nx2_qWMD1T7zw",
+      "title": "Jain Heights",
+      "totalExp": "6",
+      "totalProjects": "23",
+      "desc": "estfsdfasdf sdafsdfadf sfasdfsdfdasf asdfsdfsdfsdafsdaf",
+      "imgTitle": "Prestige Misty Waters",
+      "location": "Bangalore,Nagavara",
+      "imgURL": "https://is1-2.housingcdn.com/4f2250e8/5dd8ed6c0ce7cc009f60645d5e215574/v5/fs/concorde_tech_turf-electronics_city_phase_1-bengaluru-concorde_housing_corporation_pvt._ltd..jpg",
+      "id": 4
     }
   ]
 }
